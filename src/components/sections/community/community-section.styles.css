@@ -1,0 +1,20 @@
+.community-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.community-section .text {
+    display: flex;
+    gap: 5px;
+
+    flex-direction: column;
+    text-align: center;
+}
+
+.community-section .frames {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    align-items: stretch;
+}

@@ -1,0 +1,33 @@
+.header-container {
+    background-color: #FFFFFF;
+
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--page-horizontal-padding);
+}
+
+.header-container .right,
+.header-container .left {
+    display: flex;
+    align-items: center;
+}
+
+.header-container .left {
+    gap: 15px;
+}
+
+.header-container .right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-container .right ul a {
+    text-decoration: none;
+    font-size: 14pt;
+    color: var(--d-grey);
+}

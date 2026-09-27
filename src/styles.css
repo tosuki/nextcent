@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --page-horizontal-padding: 80px;
+    --hero-vertical-padding: 80px;
+
+    --silver: #F5F7FA;
+    --black: #263238;
+    --d-grey: #4d4d4d;
+    --grey: #717171;
+    --l-grey: #89939E;
+    --grey-blue: #ABBED1;
+    --white: #FFFFFF;
+    --primary: #28CB8B;
+    --secondary: #263238;
+    --info: #2194f3;
+
+
+    --p-shade-1: #43a046;
+    --p-shade-2: #388e3b;
+    --p-shade-3: #237d31;
+    --p-shade-4: #1b5e1f;
+    --p-shade-5: #103e13;
+
+    --p-tint-1: #66bb69;
+    --p-tint-2: #81c784;
+    --p-tint-3: #a5d6a7;
+    --p-tint-4: #c8e6c9;
+    --p-tint-5: #e8f5e9;
+
+    --warning: #fbc02d;
+    --error: #e53835;
+    --success: #2e7d31;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    font-size: 18pt;
+    background-color: var(--white);
+}
+
+body p {
+    font-size: 15pt;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 64;
+}
+
+h2 {
+    font-size: 36;
+}
+
+h3 {
+    font-size: 28;
+}
+
+h4 {
+    font-size: 20;
+}
+
+.button {
+    background-color: var(--p-shade-1);
+    padding: 12px 22px;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 14pt;
+    font-weight: 400 !important;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.button:hover {
+    background-color: var(--p-shade-2);
+}
+
+.section {
+    padding: var(--page-horizontal-padding);
+}

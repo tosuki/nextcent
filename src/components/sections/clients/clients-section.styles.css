@@ -1,0 +1,35 @@
+.clients-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+    padding-top: calc(var(--hero-vertical-padding)/1.5);
+    padding-bottom: calc(var(--hero-vertical-padding)/1.5);
+}
+
+.clients-section .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+
+.clients-section .text h2 {
+    color: var(--d-grey);
+}
+
+.clients-section .slide-show {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slide-show img {
+    width: 70px;
+    height: 70px;
+}

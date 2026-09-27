@@ -1,0 +1,33 @@
+.hero-section {
+    background-color: var(--silver) !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    padding-top: var(--hero-vertical-padding);
+    padding-bottom: var(--hero-vertical-padding);
+}
+
+.hero-section .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hero-section .left .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-section .left .text h1 {
+    color: var(--d-grey);
+}
+
+.hero-section .left .text .contrast {
+    color: var(--p-tint-1);
+}
