@@ -31,3 +31,13 @@
 .hero-section .left .text .contrast {
     color: var(--p-tint-1);
 }
+
+.hero-section .thumb {
+    width: 450px;
+    height: 400px;
+    position: relative;
+}
+
+.hero-section .thumb img {
+    object-fit: contain;
+}

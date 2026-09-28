@@ -29,6 +29,7 @@ import { NgOptimizedImage } from "@angular/common";
 
             display: flex;
             flex-direction: column;
+            gap: 15px;
             padding: 20px 25px;
         }
 
