@@ -8,6 +8,7 @@ import { UnlockSectionComponent } from "./sections/unlock/unlock-section.compone
 import { AchievementsSectionComponent } from "./sections/achievements/achievements-section.component";
 import { CalendarSectionComponent } from "./sections/calendar/calendar-section.component";
 import { CommunityUpdateSectionComponent } from "./sections/communityupdate/community-update.component";
+import { FooterComponent } from "./sections/footer/footer.component";
 
 @Component({
     selector: 'app-layout',
@@ -19,7 +20,8 @@ import { CommunityUpdateSectionComponent } from "./sections/communityupdate/comm
     UnlockSectionComponent,
     AchievementsSectionComponent,
     CalendarSectionComponent,
-    CommunityUpdateSectionComponent
+    CommunityUpdateSectionComponent,
+    FooterComponent
 ],
     styles: `
         .container {
@@ -37,6 +39,7 @@ import { CommunityUpdateSectionComponent } from "./sections/communityupdate/comm
             <app-achievements-section />
             <app-calendar-section />
             <app-community-update-section />
+            <app-footer />
         </div>
     `
 })

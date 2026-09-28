@@ -12,9 +12,7 @@ import { NgOptimizedImage } from "@angular/common";
                 <h4>{{ title() }}</h4>
                 <a [href]="link()" class="read-more">
                     Readmore
-                    <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.5 1.5L15.5 4.5M15.5 4.5L12.5 7.5M15.5 4.5L1.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <img ngSrc="assets/icons/arrow-right.svg" width="17" height="9" alt="arrow"/>
                 </a>
             </div>
         </article>

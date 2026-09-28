@@ -1,0 +1,204 @@
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pré-Footer: Demo CTA */
+.demo-section {
+    background-color: var(--silver);
+    padding: 64px var(--page-horizontal-padding);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.demo-section h2 {
+    font-size: 54px;
+    color: var(--secondary);
+    font-weight: 700;
+    line-height: 1.25;
+    max-width: 800px;
+}
+
+.demo-section .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: var(--p-shade-1);
+    color: var(--white);
+    text-decoration: none;
+    transition: background .3s;
+}
+
+.demo-section .button:hover {
+    background-color: var(--p-shade-2);
+}
+
+.demo-section .button-arrow {
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+}
+
+.demo-section .button:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+/* Rodapé Escuro */
+.footer-main {
+    background-color: var(--secondary);
+    padding: 64px var(--page-horizontal-padding) 80px var(--page-horizontal-padding);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.col-brand {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+}
+
+.col-brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.col-brand .logo span {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.col-brand .copyright {
+    margin: 30px 0 35px 0;
+    color: #D9DBE1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.col-brand .social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.col-brand .social-links a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.col-brand .social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Colunas de Links */
+.col-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.col-links h4 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.col-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.col-links ul a {
+    color: #D9DBE1;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.col-links ul a:hover {
+    color: var(--primary);
+}
+
+/* Coluna Newsletter */
+.col-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.col-subscribe h4 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subscribe-form {
+    position: relative;
+    width: 255px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 11px 40px 11px 14px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.subscribe-form input::placeholder {
+    color: #D9DBE1;
+}
+
+.subscribe-form input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.subscribe-form button img {
+    transition: transform 0.2s ease;
+}
+
+.subscribe-form button:hover img {
+    transform: scale(1.15);
+}
