@@ -94,3 +94,7 @@ h4 {
 .section {
     padding: var(--page-horizontal-padding);
 }
+
+.section h2 {
+    color: var(--d-grey);
+}

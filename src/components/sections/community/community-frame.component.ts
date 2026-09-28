@@ -18,13 +18,18 @@ import { NgOptimizedImage } from "@angular/common";
     `,
 
     styles: `
+        :host {
+            display: flex;
+        }
+
         .community-frame {
             width: 280px;
+            height: 100%;
             box-shadow: 0px 1.39px 2.78px 0px rgba(171, 190, 209, 0.2);      
 
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            padding: 20px 25px;
         }
 
         .community-frame .thumb-frame {

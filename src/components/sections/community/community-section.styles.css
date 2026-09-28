@@ -1,6 +1,7 @@
 .community-section {
     display: flex;
     flex-direction: column;
+    gap: 50px;
     align-items: center;
 }
 
@@ -12,9 +13,14 @@
     text-align: center;
 }
 
+.community-section .text h2 {
+    max-width: 540px;
+    margin-inline: auto;
+    text-wrap: balance;
+}
+
 .community-section .frames {
     display: flex;
-    align-items: flex-start;
     gap: 30px;
     align-items: stretch;
 }
