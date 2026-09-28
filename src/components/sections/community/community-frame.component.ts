@@ -1,4 +1,4 @@
-import { Component, input, InputSignal, OnInit, signal } from "@angular/core";
+import { Component, input, InputSignal } from "@angular/core";
 import { NgOptimizedImage } from "@angular/common";
 
 @Component({
@@ -25,6 +25,7 @@ import { NgOptimizedImage } from "@angular/common";
         .community-frame {
             width: 280px;
             height: 100%;
+            border-radius: 8px;
             box-shadow: 0px 1.39px 2.78px 0px rgba(171, 190, 209, 0.2);      
 
             display: flex;
@@ -56,15 +57,8 @@ import { NgOptimizedImage } from "@angular/common";
     `,
     imports: [NgOptimizedImage]
 })
-export class CommunityFrameComponent implements OnInit {
+export class CommunityFrameComponent {
     public imgUrl: InputSignal<string> = input.required<string>();
-    public title: InputSignal<string> = input.required<string>()
+    public title: InputSignal<string> = input.required<string>();
     public description: InputSignal<string> = input.required<string>();
-
-    constructor() { }
-
-
-    ngOnInit(): void {
-        console.log(`The value of imgUrl is: ${this.imgUrl()}`);
-    }
 }

@@ -8,9 +8,9 @@ import { NgOptimizedImage } from "@angular/common";
     styleUrl: './header.styles.css'
 })
 export class HeaderComponent {
-    username = input<string|null>(null)
+    username = input<string|null>(null);
 
     isAuthenticated(): boolean {
-        return this.username !== null;
+        return this.username() !== null;
     }
 }

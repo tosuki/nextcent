@@ -30,4 +30,17 @@
     text-decoration: none;
     font-size: 14pt;
     color: var(--d-grey);
+    transition: color 0.2s ease;
+}
+
+.header-container .right ul a:hover {
+    color: var(--primary);
+}
+
+.header-container .right ul a.button {
+    color: var(--white);
+}
+
+.header-container .right ul a.button:hover {
+    color: var(--white);
 }
