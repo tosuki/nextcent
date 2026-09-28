@@ -5,6 +5,7 @@ import { HeroSectionComponent } from "./sections/hero/hero-section.component";
 import { ClientSectionComponent } from "./sections/clients/clients-section.component";
 import { CommunityComponent } from "./sections/community/community-section.component";
 import { UnlockSectionComponent } from "./sections/unlock/unlock-section.component";
+import { AchievementsSectionComponent } from "./sections/achievements/achievements-section.component";
 
 @Component({
     selector: 'app-layout',
@@ -13,7 +14,8 @@ import { UnlockSectionComponent } from "./sections/unlock/unlock-section.compone
     HeroSectionComponent,
     ClientSectionComponent,
     CommunityComponent,
-    UnlockSectionComponent
+    UnlockSectionComponent,
+    AchievementsSectionComponent
 ],
     styles: `
         .container {
@@ -28,6 +30,7 @@ import { UnlockSectionComponent } from "./sections/unlock/unlock-section.compone
             <app-clients-section />
             <app-community-section />
             <app-unlock-section />
+            <app-achievements-section />
         </div>
     `
 })

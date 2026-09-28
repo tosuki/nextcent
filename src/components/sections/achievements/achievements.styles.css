@@ -1,0 +1,57 @@
+.achievements-section {
+    background-color: var(--silver) !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.achievements-section .text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.achievements-section .text h2 {
+    color: var(--d-grey);
+}
+
+.achievements-section .text .contrast {
+    color: var(--p-tint-1);
+}
+
+.achievements-section .text p {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+.achievements-section .counts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 35px;
+}
+
+.achievements-section .counts .item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 200px;
+}
+
+.achievements-section .counts .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.achievements-section .counts .item .info h3 {
+    color: var(--d-grey);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.achievements-section .counts .item .info p {
+    color: var(--grey);
+    font-size: 14px;
+}
