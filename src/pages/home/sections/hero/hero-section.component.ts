@@ -7,4 +7,4 @@ import { NgOptimizedImage } from "@angular/common";
     styleUrl: './hero-section.styles.css',
     imports: [NgOptimizedImage]
 })
-export class HeroSectionComponent {}
+export class HeroSectionComponent { }

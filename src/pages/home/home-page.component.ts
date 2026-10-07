@@ -13,16 +13,16 @@ import { CalendarSectionComponent } from "./sections/calendar/calendar-section.c
 @Component({
     selector: 'app-layout',
     imports: [
-    HeaderComponent,
-    HeroSectionComponent,
-    ClientSectionComponent,
-    CommunityComponent,
-    UnlockSectionComponent,
-    AchievementsSectionComponent,
-    CalendarSectionComponent,
-    CommunityUpdateSectionComponent,
-    FooterComponent
-],
+        HeaderComponent,
+        HeroSectionComponent,
+        ClientSectionComponent,
+        CommunityComponent,
+        UnlockSectionComponent,
+        AchievementsSectionComponent,
+        CalendarSectionComponent,
+        CommunityUpdateSectionComponent,
+        FooterComponent
+    ],
     styles: `
         .container {
             width: 100%;
@@ -43,4 +43,4 @@ import { CalendarSectionComponent } from "./sections/calendar/calendar-section.c
         </div>
     `
 })
-export class LayoutComponent {}
+export class LayoutComponent { }

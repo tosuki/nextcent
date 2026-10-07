@@ -7,4 +7,4 @@ import { NgOptimizedImage } from "@angular/common";
     styleUrl: './unlock-section.styles.css',
     imports: [NgOptimizedImage]
 })
-export class UnlockSectionComponent {}
+export class UnlockSectionComponent { }

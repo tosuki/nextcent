@@ -13,16 +13,16 @@ import { FooterComponent } from "../pages/home/sections/footer/footer.component"
 @Component({
     selector: 'app-layout',
     imports: [
-    HeaderComponent,
-    HeroSectionComponent,
-    ClientSectionComponent,
-    CommunityComponent,
-    UnlockSectionComponent,
-    AchievementsSectionComponent,
-    CalendarSectionComponent,
-    CommunityUpdateSectionComponent,
-    FooterComponent
-],
+        HeaderComponent,
+        HeroSectionComponent,
+        ClientSectionComponent,
+        CommunityComponent,
+        UnlockSectionComponent,
+        AchievementsSectionComponent,
+        CalendarSectionComponent,
+        CommunityUpdateSectionComponent,
+        FooterComponent
+    ],
     styles: `
         .container {
             width: 100%;

@@ -10,7 +10,16 @@
             <li><a href="#">Community</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Pricing</a></li>
-            <li><a href="#" class="button">Register Now</a></li>
+            
+            @if (isAuthenticated()) {
+                <app-headerbar-user-button
+                    username="Marina Costa"
+                    plan="Plano Pro"
+                    img="assets/avatar.png"
+                />
+            } @else {
+                <li><a href="#" class="button">Register Now</a></li>
+            }
         </ul>
     </div>
 </header>
