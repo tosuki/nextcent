@@ -1,14 +1,14 @@
 import { Component } from "@angular/core";
 
-import { HeaderComponent } from "./headerbar/header.component";
-import { HeroSectionComponent } from "../pages/home/sections/hero/hero-section.component";
-import { ClientSectionComponent } from "../pages/home/sections/clients/clients-section.component";
-import { CommunityComponent } from "../pages/home/sections/community/community-section.component";
-import { UnlockSectionComponent } from "../pages/home/sections/unlock/unlock-section.component";
-import { AchievementsSectionComponent } from "../pages/home/sections/achievements/achievements-section.component";
-import { CalendarSectionComponent } from "../pages/home/sections/calendar/calendar-section.component";
-import { CommunityUpdateSectionComponent } from "../pages/home/sections/communityupdate/community-update.component";
-import { FooterComponent } from "../pages/home/sections/footer/footer.component";
+import { HeaderComponent } from "../../components/headerbar/header.component";
+import { HeroSectionComponent } from "./sections/hero/hero-section.component";
+import { ClientSectionComponent } from "./sections/clients/clients-section.component";
+import { CommunityComponent } from "./sections/community/community-section.component";
+import { UnlockSectionComponent } from "./sections/unlock/unlock-section.component";
+import { AchievementsSectionComponent } from "./sections/achievements/achievements-section.component";
+import { CommunityUpdateSectionComponent } from "./sections/communityupdate/community-update.component";
+import { FooterComponent } from "./sections/footer/footer.component";
+import { CalendarSectionComponent } from "./sections/calendar/calendar-section.component";
 
 @Component({
     selector: 'app-layout',
