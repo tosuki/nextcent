@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 
 import { HomePageComponent } from "./pages/home/home-page.component";
+import { SignInPageComponent } from "./pages/session/signin/signin-page.component";
 import { SignUpPageComponent } from "./pages/session/signup/signup-page.component";
 
 export const routes: Routes = [
@@ -9,13 +10,26 @@ export const routes: Routes = [
         component: HomePageComponent
     },
     {
+        path: 'signin',
+        component: SignInPageComponent
+    },
+    {
+        path: 'login',
+        redirectTo: 'signin'
+    },
+    {
+        path: 'signup',
+        component: SignUpPageComponent
+    },
+    {
+        path: 'register',
+        redirectTo: 'signup'
+    },
+    {
         path: 'session',
-        redirectTo: '',
         children: [
-            {
-                path: 'signup',
-                component: SignUpPageComponent
-            }
+            { path: 'signin', component: SignInPageComponent },
+            { path: 'signup', component: SignUpPageComponent }
         ]
     },
     {
@@ -25,4 +39,3 @@ export const routes: Routes = [
 ];
 
 export const router: Routes = routes;
-

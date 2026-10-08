@@ -1,12 +1,13 @@
 import { Component, inject, input } from "@angular/core";
 import { NgOptimizedImage } from "@angular/common";
+import { RouterLink } from "@angular/router";
 import { AuthService } from "../../services/auth.service";
 
 import { HeaderUserButtonComponent } from './header-user-button.component'
 
 @Component({
     selector: 'app-header',
-    imports: [NgOptimizedImage, HeaderUserButtonComponent],
+    imports: [NgOptimizedImage, RouterLink, HeaderUserButtonComponent],
     templateUrl: './header.template.html',
     styleUrl: './header.styles.css'
 })

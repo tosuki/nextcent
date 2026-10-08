@@ -7,11 +7,10 @@ import { LayoutComponent } from "../common/components/layout/layout.component";
 import { SocialButtonComponent } from "../common/components/social-button/social-button.component";
 import { InputComponent } from "../common/components/input/input.component";
 import { ButtonComponent } from "../common/components/button/button.component";
-import { PasswordStrengthComponent } from "../common/components/password-strength/password-strength.component";
 import { AuthService } from "../../../services/auth.service";
 
 @Component({
-    selector: 'app-signup-page',
+    selector: 'app-signin-page',
     imports: [
         ReactiveFormsModule,
         RouterLink,
@@ -19,11 +18,10 @@ import { AuthService } from "../../../services/auth.service";
         LayoutComponent,
         SocialButtonComponent,
         InputComponent,
-        ButtonComponent,
-        PasswordStrengthComponent
+        ButtonComponent
     ],
     template: `
-        <app-session-layout [img]="'assets/session/signup.png'">
+        <app-session-layout [img]="'assets/session/signin.png'">
             <div class="card-content">
                 <header class="brand-header">
                     <a routerLink="/" class="brand-link">
@@ -33,30 +31,25 @@ import { AuthService } from "../../../services/auth.service";
                 </header>
 
                 <div class="headings">
-                    <h1 class="card-title">Comece a aprender</h1>
+                    <h1 class="card-title">Boas-vindas de volta</h1>
                     <p class="card-subtitle">
-                        Crie sua conta gratuita e monte uma trilha alinhada aos seus objetivos profissionais.
+                        Entre para continuar sua trilha de aprendizado e acompanhar seu progresso.
                     </p>
                 </div>
 
                 <app-social-button
-                    label="Cadastrar com Google"
-                    (clicked)="onGoogleSignup()"
+                    label="Continuar com Google"
+                    (clicked)="onGoogleLogin()"
                 />
+
+                <div class="divider">
+                    <span class="divider-text">ou entre com e-mail</span>
+                </div>
 
                 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="session-form">
                     <div class="form-fields">
                         <app-input
-                            label="Nome completo"
-                            placeholder="Como podemos chamar você?"
-                            type="text"
-                            icon="user"
-                            formControlName="name"
-                            autocomplete="name"
-                        />
-
-                        <app-input
-                            label="E-mail profissional"
+                            label="E-mail"
                             placeholder="voce@empresa.com"
                             type="email"
                             icon="mail"
@@ -64,38 +57,36 @@ import { AuthService } from "../../../services/auth.service";
                             autocomplete="email"
                         />
 
-                        <div class="password-field-container">
-                            <app-input
-                                label="Senha"
-                                placeholder="Mínimo de 8 caracteres"
-                                type="password"
-                                icon="lock"
-                                formControlName="password"
-                                autocomplete="new-password"
-                            />
-                            <app-password-strength [password]="form.get('password')?.value || ''" />
-                        </div>
+                        <app-input
+                            label="Senha"
+                            placeholder="Digite sua senha"
+                            type="password"
+                            icon="lock"
+                            formControlName="password"
+                            autocomplete="current-password"
+                        />
                     </div>
 
-                    <div class="terms-container">
-                        <label class="terms-checkbox">
-                            <input type="checkbox" formControlName="agreeTerms" />
-                            <span class="terms-text">
-                                Concordo com os Termos de Uso e a Política de Privacidade da Nexcent.
-                            </span>
+                    <div class="form-options">
+                        <label class="remember-checkbox">
+                            <input type="checkbox" formControlName="rememberMe" />
+                            <span class="checkbox-label">Lembrar de mim</span>
                         </label>
+                        <a href="#" (click)="$event.preventDefault()" class="forgot-password-link">
+                            Esqueci minha senha
+                        </a>
                     </div>
 
                     <app-button
-                        label="Criar minha conta"
+                        label="Entrar"
                         type="submit"
                         [disabled]="form.invalid && form.touched"
                     />
                 </form>
 
                 <p class="switch-link-wrapper">
-                    Já possui uma conta?
-                    <a routerLink="/signin" class="highlight-link">Entrar</a>
+                    Ainda não tem conta?
+                    <a routerLink="/signup" class="highlight-link">Criar conta grátis</a>
                 </p>
 
                 <footer class="copyright-footer">
@@ -113,14 +104,14 @@ import { AuthService } from "../../../services/auth.service";
         .card-content {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
             height: 100%;
         }
 
         .brand-header {
             display: flex;
             align-items: center;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
 
         .brand-link {
@@ -158,58 +149,80 @@ import { AuthService } from "../../../services/auth.service";
             margin: 0;
         }
 
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 2px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .divider-text {
+            padding: 0 12px;
+            font-size: 12px;
+            color: var(--l-grey, #89939E);
+            font-weight: 400;
+        }
+
         .session-form {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
         }
 
         .form-fields {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
-        .password-field-container {
+        .form-options {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
         }
 
-        .terms-container {
+        .remember-checkbox {
             display: flex;
-            align-items: flex-start;
-            font-size: 12.5px;
-            line-height: 1.4;
-        }
-
-        .terms-checkbox {
-            display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 8px;
             cursor: pointer;
             user-select: none;
             color: var(--grey, #717171);
         }
 
-        .terms-checkbox input[type="checkbox"] {
+        .remember-checkbox input[type="checkbox"] {
             width: 16px;
             height: 16px;
             accent-color: var(--primary, #28CB8B);
             cursor: pointer;
             border-radius: 4px;
-            margin-top: 2px;
-            flex-shrink: 0;
         }
 
-        .terms-text {
-            color: var(--grey, #717171);
+        .forgot-password-link {
+            color: var(--p-shade-1, #43a046);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .forgot-password-link:hover {
+            color: var(--p-shade-2, #388e3b);
+            text-decoration: underline;
         }
 
         .switch-link-wrapper {
             text-align: center;
             font-size: 13px;
             color: var(--grey, #717171);
-            margin: 2px 0 0 0;
+            margin: 4px 0 0 0;
         }
 
         .highlight-link {
@@ -227,26 +240,25 @@ import { AuthService } from "../../../services/auth.service";
 
         .copyright-footer {
             margin-top: auto;
-            padding-top: 12px;
+            padding-top: 16px;
             font-size: 11.5px;
             color: var(--grey-blue, #ABBED1);
             text-align: left;
         }
     `
 })
-export class SignUpPageComponent {
+export class SignInPageComponent {
     private fb = inject(FormBuilder);
     private authService = inject(AuthService);
     private router = inject(Router);
 
     form = this.fb.group({
-        name: ['', [Validators.required, Validators.minLength(2)]],
         email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(8)]],
-        agreeTerms: [false, [Validators.requiredTrue]]
+        password: ['', [Validators.required, Validators.minLength(6)]],
+        rememberMe: [false]
     });
 
-    onGoogleSignup(): void {
+    onGoogleLogin(): void {
         this.authService.setAuthenticated();
         this.authService.setAccessToken("sample-google-access-token");
         this.router.navigate(['/']);
