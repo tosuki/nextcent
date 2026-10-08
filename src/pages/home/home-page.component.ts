@@ -11,7 +11,7 @@ import { FooterComponent } from "./sections/footer/footer.component";
 import { CalendarSectionComponent } from "./sections/calendar/calendar-section.component";
 
 @Component({
-    selector: 'app-layout',
+    selector: 'app-home-page',
     imports: [
         HeaderComponent,
         HeroSectionComponent,
@@ -43,4 +43,4 @@ import { CalendarSectionComponent } from "./sections/calendar/calendar-section.c
         </div>
     `
 })
-export class LayoutComponent { }
+export class HomePageComponent { }

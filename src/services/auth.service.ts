@@ -7,7 +7,7 @@ export class AuthService {
     private refreshToken = signal<string>("");
     private accessToken = signal<string>("");
 
-    isAuthenticated = signal<boolean>(true);
+    isAuthenticated = signal<boolean>(false);
 
     initialize() {
         const refreshToken = localStorage.getItem("refresh-token");
